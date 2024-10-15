@@ -1,0 +1,357 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f3eeeb;
+    font-family: 'Inter', sans-serif;
+    min-height:fit-content;
+}
+
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+/************** nav start *****************/
+
+
+
+    
+    .header {
+        background-color: rgba(209, 209, 209, 0.543);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(5px);
+    }
+    
+    .headerContent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 60px;
+        max-width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    
+    .logo {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 30px;
+        font-weight: 800;
+    }
+    .logo span {
+        color: rgb(198, 53, 53);
+        padding: 0 10px;
+    }
+    .header a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    ul {
+        list-style: none;
+    } 
+    
+    .navList {
+        display: flex;
+        column-gap: 40px;
+    }
+    
+    .navLink {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 18px;
+        font-weight: 500;
+        transition: color 0.4s, opacity 0.2s ease-in-out;
+        position: relative;
+    }
+    
+    .navLink:hover,
+    .navLink:focus {
+        color: rgba(255, 255, 255, 1);
+    }
+    
+    .navLink::after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        background-color: rgb(193, 74, 38);
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .navLink:hover::after {
+        opacity: 1;
+    }
+    
+
+/************** nav end *****************/
+
+
+
+
+/************** Home Start **************/
+.home{
+	height: 100vh;
+	background-image: url('../images/bgimg.jpg');
+	background-size: cover;
+	padding:15px;
+	display: flex;
+	position: relative;
+    
+}
+
+
+
+.home .container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 10%;
+    justify-content: center;
+}
+
+.home h1{
+	color:#ffffff;
+	font-size: 60px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin:0;
+    padding:5px 0;
+}
+
+.home h1 span{
+	color:#c11325;;
+}
+
+
+/************** Home end **************/
+
+
+/************** About start **************/
+
+.about{
+	padding:80px 0px;
+	background-color:#ebe6e6;
+}
+
+
+.headingContainer {
+    width: 100%;
+    margin: 5rem 0;
+}
+.about .headingContainer .heading{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    color: #000000;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+
+.about .content{ 
+    display: flex;
+}
+.about .content .box{
+	flex:0 0 33.33%;
+	max-width: 33.33%;
+	padding:15px;
+}
+.about .content .box .inner{
+	background-color:#20204e;
+    border-radius: 20px;
+}
+.about .content .box:nth-child(2) .inner{
+	background-color: #b23411;
+}
+.about .content .box .inner .text{
+	padding:30px;
+}
+
+.about .content .box .inner .text h4{
+    font-size: 20px;
+    margin:0;
+    padding: 0px 0px 15px;
+    font-weight: 500;
+    color:#ffffff;
+    text-transform: capitalize;
+    text-align: center;
+}
+.about .content .box .inner .text p{
+	font-size: 15px;
+	line-height:20px;
+	color:#e2d7d7;
+	text-align: center;
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/************** About end **************/
+
+/************** Service start **************/
+
+.service{
+	padding:80px 0px;
+	background-color: #000000;
+    border-radius: 3rem;
+}
+
+
+.service .headingContainer {
+    width: 100%;
+    margin: 5rem 0;
+}
+.service .headingContainer .heading{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    color: #f3efef;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+
+.service .content{
+	display:flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 0, 0, 0.096);
+    margin: 0 30px;
+}
+
+
+.service .content h2{
+	font-size: 30px;
+	font-weight: 500;
+	color:#ffffff;
+	padding:0px 0px 20px;
+}
+
+.service .content p{
+    font-size: 15px;
+	line-height:20px;
+	color:#bebebe;
+	margin:0;
+	padding:0px 0px 20px;
+	font-family: sans-serif;
+}
+
+.service .content .btn{
+	padding:8px 30px;
+	background-color: #b42828;
+    border-radius: 0.5rem;
+	color:#ffffff;
+	text-decoration: none;
+    width: fit-content;
+	border:1px solid transparent;
+	cursor: pointer;
+	transition: all 0.5s ease;
+
+
+}
+
+.service .content .btn:hover{
+	border:1px solid #ffffff;
+	color:#ffffff;
+	background-color: transparent;
+}
+
+/* xl screens  */
+@media(max-width: 1536px){
+    .home h1{
+        font-size: 70px;
+        margin: 20px 0 20px 40px;
+        }
+}
+
+
+/* lg screens */
+@media(max-width: 1280px){
+    .home h1{
+        font-size: 55px;
+        margin: 10px 0 10px 30px;
+        }
+}
+
+/* tablet and small laptops */
+@media(max-width: 1024px){
+    .home h1{
+        font-size: 45px;
+        margin: 5px 0 5px 25px;
+        }
+}
+
+/* sm screens */
+@media(max-width: 768px){
+
+
+    .logo {
+        font-size: 18px;
+    }
+    .navList {
+        column-gap: 10px;
+    }
+    .navLink {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+
+    .home h1{
+        font-size: 38px;
+        margin: 5px 0 5px 10px;
+        }
+
+
+    .about .content{
+        flex-wrap: wrap;
+        }
+    .about .content .box {
+        flex: 0 0 100%;
+        max-width: 100%;
+        }
+}
+
+
+/* xs screens */
+@media(max-width: 475px){
+
+    
+        .logo {
+            font-size: 18px;
+        }
+        .navList {
+            column-gap: 10px;
+        }
+        .navLink {
+            font-size: 15px;
+            font-weight: 500;
+        }
+    
+    
+        .home h1{
+            font-size: 30px;
+            margin: 0 0 0 5px;
+            }
+    
+    
+        .about .content{
+            flex-wrap: wrap;
+            }
+        .about .content .box {
+            flex: 0 0 100%;
+            max-width: 100%;
+            }
+    }
+
+
+
